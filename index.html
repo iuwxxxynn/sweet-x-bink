@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sweet Milestones × Bink — a celebration of showing up.">
+<title>Sweet Milestones × Bink</title>
+
+<style>
+:root{
+  --cream:#F7F5F0;
+  --pink:#F2A7B8;
+  --ink:#171717;
+  --line:#D7D1C9;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  overflow-x:hidden;
+  background:var(--cream);
+  color:var(--ink);
+  font-family:Arial,Helvetica,sans-serif;
+}
+img{display:block;max-width:100%}
+.wrap{width:min(1180px,calc(100% - 56px));margin:auto}
+.kicker{
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+}
+.serif{
+  font-family:Georgia,"Times New Roman",serif;
+  font-weight:400;
+  font-style:normal;
+}
+
+/* TOP */
+.topbar{
+  position:absolute;
+  z-index:20;
+  top:0;left:0;
+  width:100%;
+  padding:24px 30px;
+  display:flex;
+  justify-content:space-between;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.17em;
+  text-transform:uppercase;
+}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  padding:95px 24px 55px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--cream);
+}
+.hero-stage{
+  position:relative;
+  width:min(1050px,100%);
+  min-height:700px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.hero-title{
+  position:absolute;
+  inset:50% auto auto 50%;
+  width:92%;
+  transform:translate(-55%,-50%);
+  margin:0;
+  text-align:left;
+  padding-left:8%;
+  font-size:clamp(80px,12vw,170px);
+  line-height:.75;
+  letter-spacing:-.075em;
+  font-weight:900;
+  text-transform:uppercase;
+}
+.hero-title span{display:block}
+.hero-title em{
+  display:block;
+  margin:.18em 0 .12em;
+  color:var(--pink);
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:.34em;
+  line-height:1;
+  font-weight:400;
+  letter-spacing:-.03em;
+  text-transform:lowercase;
+}
+.hero-bottle{
+  position:absolute;
+  z-index:4;
+  width:min(270px,26vw);
+  left:76%;
+  top:54%;
+  transform:translate(-50%,-42%);
+}
+.float{
+  position:absolute;
+  z-index:5;
+  width:clamp(85px,10vw,135px);
+  filter:drop-shadow(0 6px 5px rgba(0,0,0,.05));
+}
+.f5{left:7%;top:16%;transform:rotate(-10deg)}
+.f10{right:4%;top:19%;transform:rotate(8deg)}
+.f25{left:18%;bottom:7%;transform:rotate(7deg)}
+.f50{right:5%;bottom:8%;transform:rotate(-7deg)}
+.note{
+  position:absolute;
+  z-index:6;
+  right:1%;
+  top:58%;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:18px;
+  line-height:1.08;
+  font-style:normal;
+  transform:rotate(-5deg);
+}
+.note .arrow{display:block;font-family:Arial,sans-serif;font-size:28px;margin-top:3px}
+
+/* SWEET / PINK */
+.sweet{
+  background:var(--pink);
+  padding:125px 0;
+}
+.sweet-grid{
+  display:grid;
+  grid-template-columns:1.35fr .65fr;
+  gap:8vw;
+  align-items:center;
+}
+.photo-frame{
+  min-height:580px;
+  background:rgba(255,255,255,.18);
+  position:relative;
+  overflow:hidden;
+}
+.photo-frame img{
+  width:100%;
+  height:100%;
+  min-height:580px;
+  object-fit:cover;
+}
+.photo-placeholder{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:30px;
+  text-align:center;
+  font-family:Georgia,serif;
+  font-style:normal;
+  font-size:18px;
+  opacity:.6;
+}
+.sweet-copy h2{
+  margin:14px 0 30px;
+  font-size:clamp(56px,7vw,100px);
+  line-height:.82;
+  letter-spacing:-.07em;
+  font-weight:900;
+  text-transform:uppercase;
+}
+.sweet-copy h2 span{display:block}
+.sweet-copy h2 em{
+  display:block;
+  color:var(--cream);
+  text-transform:none;
+  font-family:Georgia,serif;
+  font-weight:400;
+  font-style:normal;
+}
+.sweet-copy p{
+  max-width:390px;
+  margin:0;
+  font-size:16px;
+  line-height:1.55;
+}
+.sweet-copy .down{
+  margin-top:42px;
+  font-family:Georgia,serif;
+  font-style:normal;
+  font-size:20px;
+}
+
+/* MILESTONES */
+.milestones{
+  background:var(--cream);
+  padding:125px 0 140px;
+}
+.milestone-head{
+  display:grid;
+  grid-template-columns:1.5fr .5fr;
+  gap:50px;
+  align-items:end;
+  margin-bottom:75px;
+}
+.milestone-head h2{
+  margin:12px 0 0;
+  font-size:clamp(72px,10vw,145px);
+  line-height:.75;
+  letter-spacing:-.075em;
+  font-weight:900;
+  text-transform:uppercase;
+}
+.milestone-head h2 span{display:block}
+.milestone-head h2 em{
+  display:block;
+  color:var(--pink);
+  text-transform:lowercase;
+  font-family:Georgia,serif;
+  font-weight:400;
+  font-style:normal;
+}
+.milestone-head p{
+  margin:0 0 8px;
+  max-width:250px;
+  font-size:15px;
+  line-height:1.5;
+}
+.product-row{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border-top:1px solid var(--ink);
+  border-bottom:1px solid var(--ink);
+}
+.product{
+  min-height:440px;
+  padding:22px;
+  border-right:1px solid var(--ink);
+  display:flex;
+  flex-direction:column;
+}
+.product:last-child{border-right:0}
+.product-meta{
+  display:flex;
+  justify-content:space-between;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+.product img{
+  width:78%;
+  max-height:275px;
+  object-fit:contain;
+  margin:auto;
+  transition:transform .25s ease;
+}
+.product:nth-child(odd):hover img{transform:rotate(-3deg) scale(1.03)}
+.product:nth-child(even):hover img{transform:rotate(3deg) scale(1.03)}
+.milestone-bottom{
+  margin-top:35px;
+  text-align:center;
+  font-family:Georgia,serif;
+  font-size:21px;
+  font-style:normal;
+}
+
+/* BINK PINK */
+.collect{
+  min-height:100vh;
+  padding:110px 24px 100px;
+  background:var(--pink);
+  text-align:center;
+  overflow:hidden;
+}
+.collect h2{
+  position:relative;
+  z-index:2;
+  margin:14px 0 0;
+  font-size:clamp(72px,10vw,145px);
+  line-height:.76;
+  letter-spacing:-.075em;
+  font-weight:900;
+  text-transform:uppercase;
+}
+.collect h2 span{display:block}
+.collect h2 em{
+  display:block;
+  color:var(--cream);
+  font-family:Georgia,serif;
+  font-weight:400;
+  font-style:normal;
+  text-transform:lowercase;
+}
+.bottle-stage{
+  position:relative;
+  width:min(900px,100%);
+  min-height:620px;
+  margin:-10px auto 0;
+}
+.collect-bottle{
+  position:absolute;
+  z-index:3;
+  width:min(350px,42vw);
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-43%);
+}
+.collect-sticker{
+  position:absolute;
+  z-index:5;
+  width:clamp(100px,14vw,165px);
+  filter:drop-shadow(0 7px 6px rgba(0,0,0,.05));
+}
+.c5{left:9%;top:18%;transform:rotate(-10deg)}
+.c10{right:8%;top:18%;transform:rotate(8deg)}
+.c25{left:5%;bottom:12%;transform:rotate(7deg)}
+.c50{right:7%;bottom:11%;transform:rotate(-7deg)}
+.collect-note{
+  position:absolute;
+  z-index:7;
+  right:15%;
+  top:54%;
+  font-family:Georgia,serif;
+  font-size:18px;
+  font-style:normal;
+  transform:rotate(-6deg);
+}
+.collect-note span{display:block;font-family:Arial,sans-serif;font-size:28px}
+.flow{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:20px;
+  margin-top:-15px;
+  font-family:Georgia,serif;
+  font-size:20px;
+  font-style:normal;
+}
+
+/* ASK */
+.ask{
+  min-height:92vh;
+  background:var(--cream);
+  padding:120px 24px 45px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.ask-inner{width:min(1000px,100%);margin:auto;text-align:center}
+.ask h2{
+  margin:18px 0 75px;
+  font-size:clamp(70px,10vw,140px);
+  line-height:.76;
+  letter-spacing:-.075em;
+  font-weight:900;
+  text-transform:uppercase;
+}
+.ask h2 span{display:block}
+.ask h2 em{
+  display:block;
+  color:var(--pink);
+  font-family:Georgia,serif;
+  font-weight:400;
+  font-style:normal;
+  text-transform:none;
+}
+.stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border-top:1px solid var(--ink);
+  border-bottom:1px solid var(--ink);
+}
+.stat{
+  padding:28px 12px;
+  border-right:1px solid var(--ink);
+}
+.stat:last-child{border-right:0}
+.stat strong{
+  display:block;
+  font-family:Georgia,serif;
+  font-size:clamp(48px,6vw,80px);
+  line-height:.9;
+  font-weight:400;
+  font-style:normal;
+}
+.stat span{
+  display:block;
+  margin-top:9px;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.ask-line{
+  max-width:600px;
+  margin:55px auto 0;
+  font-family:Georgia,serif;
+  font-size:clamp(22px,2.8vw,34px);
+  line-height:1.15;
+  font-style:normal;
+}
+.footer{
+  margin-top:80px;
+  display:flex;
+  justify-content:space-between;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+
+/* MOBILE */
+@media(max-width:720px){
+  .wrap{width:calc(100% - 32px)}
+  .topbar{padding:18px 16px}
+  .hero{padding-left:16px;padding-right:16px}
+  .hero-stage{min-height:610px}
+.hero-title{font-size:20vw; width:100%; transform:translate(-50%,-55%); text-align:center; padding-left:0}
+  .hero-bottle{width:43vw; left:65%; top:57%; transform:translate(-50%,-35%)}
+  .float{width:22vw}
+  .f5{left:1%;top:17%}.f10{right:1%;top:20%}
+  .f25{left:2%;bottom:10%}.f50{right:2%;bottom:9%}
+  .note{right:0;top:55%;font-size:14px}
+  .sweet{padding:80px 0}
+  .sweet-grid{grid-template-columns:1fr;gap:55px}
+  .photo-frame,.photo-frame img{min-height:440px}
+  .sweet-copy h2{font-size:17vw}
+  .milestones{padding:80px 0 90px}
+  .milestone-head{grid-template-columns:1fr;gap:25px;margin-bottom:50px}
+  .milestone-head h2{font-size:19vw}
+  .product-row{grid-template-columns:1fr 1fr}
+  .product{min-height:330px}
+  .product:nth-child(2){border-right:0}
+  .product:nth-child(-n+2){border-bottom:1px solid var(--ink)}
+  .product img{width:72%}
+  .collect{padding:80px 16px}
+  .collect h2{font-size:18vw}
+  .bottle-stage{min-height:500px}
+  .collect-bottle{width:50vw}
+  .collect-sticker{width:24vw}
+  .c5{left:0}.c10{right:0}.c25{left:0}.c50{right:0}
+  .collect-note{right:2%;font-size:14px}
+  .flow{gap:9px;font-size:16px;flex-wrap:wrap}
+  .ask{padding:90px 16px 35px}
+  .ask h2{font-size:18vw;margin-bottom:55px}
+  .stat{padding:23px 6px}
+  .stat strong{font-size:13vw}
+  .stat span{font-size:7px;letter-spacing:.1em}
+  .footer{margin-top:60px}
+}
+
+/* V5 CONTENT */
+.hero-title{font-size:clamp(62px,9.4vw,138px);line-height:.82;max-width:900px}
+.hero-intro{position:absolute;z-index:7;left:8%;bottom:4%;width:min(390px,38%);font-size:14px;line-height:1.5}.hero-intro p{margin:0 0 9px}
+.sweet-copy p + p{margin-top:18px}.sweet-detail{font-size:14px!important;opacity:.82}
+.why-copy{width:min(620px,90%);margin:-20px auto 0;text-align:left;font-size:16px;line-height:1.5}.why-copy p{margin:0 0 12px}.why-copy strong{display:block;margin-top:20px}.progression{margin-top:28px;text-align:center;font-family:Georgia,serif;font-style:normal;font-size:22px}
+.founders-copy{max-width:650px;margin:48px auto 0;font-size:15px;line-height:1.55}.founders-copy p{margin:0 0 14px}.moment{max-width:650px;margin:52px auto 0;padding-top:28px;border-top:1px solid var(--ink);text-align:left}.moment p{margin:18px 0 0;font-family:Georgia,serif;font-size:21px;line-height:1.45;font-style:italic}
+@media(max-width:720px){.hero-title{font-size:16.5vw!important}.hero-intro{left:5%;bottom:1%;width:90%;font-size:12px}.why-copy{margin-top:-5px;font-size:14px}.founders-copy{font-size:14px}.moment p{font-size:18px}}
+
+/* V6 REFINEMENTS */
+.stat strong{
+  font-family:Arial,Helvetica,sans-serif;
+  font-style:normal;
+  font-weight:800;
+  letter-spacing:-.07em;
+  font-variant-numeric:tabular-nums;
+}
+.product-meta span:last-child{
+  font-family:Arial,Helvetica,sans-serif;
+  font-weight:800;
+  letter-spacing:-.02em;
+}
+.milestone-bottom{
+  font-family:Arial,Helvetica,sans-serif;
+  font-style:normal;
+  font-weight:800;
+  letter-spacing:.08em;
+  font-size:14px;
+}
+.cta{
+  width:min(650px,100%);
+  margin:42px auto 0;
+  min-height:62px;
+  padding:0 22px;
+  border:1px solid var(--ink);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  color:var(--ink);
+  text-decoration:none;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.16em;
+  transition:.2s ease;
+}
+.cta:hover{
+  background:var(--ink);
+  color:var(--cream);
+}
+.cta span{
+  font-size:22px;
+  letter-spacing:0;
+}
+.hero-title{
+  width:68%;
+  left:7%;
+  top:46%;
+  transform:translateY(-50%);
+  padding-left:0;
+  text-align:left;
+}
+.hero-intro{
+  left:7%;
+  bottom:4%;
+  width:min(390px,38%);
+}
+@media(max-width:720px){
+  .hero-title{
+    width:82%;
+    left:5%;
+    top:38%;
+    transform:none;
+    text-align:left;
+    padding-left:0;
+    font-size:16vw!important;
+  }
+  .hero-bottle{
+    width:40vw;
+    left:72%;
+    top:62%;
+    transform:translate(-50%,-35%);
+  }
+  .hero-intro{
+    left:5%;
+    bottom:1%;
+    width:88%;
+  }
+  .cta{min-height:58px}
+}
+
+/* V7 — CLEARER HERO + CLEANER TYPE */
+.serif,
+.hero-title em,
+.sweet-copy h2 em,
+.milestone-head h2 em,
+.collect h2 em,
+.ask h2 em,
+.note,
+.collect-note,
+.progression,
+.ask-line,
+.moment p{
+  font-family:Georgia,"Times New Roman",serif;
+  font-style:normal;
+}
+.hero-eyebrow{
+  position:absolute;
+  z-index:8;
+  left:7%;
+  top:14%;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.18em;
+}
+.hero-title{
+  width:61%;
+  left:7%;
+  top:43%;
+  transform:translateY(-50%);
+  padding:0;
+  font-size:clamp(50px,7.3vw,108px);
+  line-height:.86;
+  letter-spacing:-.065em;
+}
+.hero-title span{white-space:nowrap}
+.hero-title span:nth-child(2){color:var(--pink)}
+.hero-title span:nth-child(3){
+  font-size:.62em;
+  letter-spacing:-.045em;
+  margin-top:.18em;
+}
+.hero-bottle{
+  width:min(265px,25vw);
+  left:80%;
+  top:53%;
+}
+.hero-intro{
+  left:7%;
+  bottom:8%;
+  width:min(470px,47%);
+  font-size:15px;
+  line-height:1.5;
+}
+.f5{left:auto;right:5%;top:15%}
+.f10{right:28%;top:18%}
+.f50{right:3%;bottom:8%}
+.note{display:none}
+@media(max-width:720px){
+  .hero-eyebrow{left:5%;top:12%}
+  .hero-title{
+    width:90%;
+    left:5%;
+    top:24%;
+    transform:none;
+    font-size:13.5vw!important;
+  }
+  .hero-title span{white-space:normal}
+  .hero-bottle{width:38vw;left:70%;top:61%}
+  .f5{right:3%;top:43%}
+  .f10{right:auto;left:5%;top:50%}
+  .f50{right:4%;bottom:8%}
+  .hero-intro{left:5%;bottom:2%;width:58%;font-size:12px}
+}
+
+/* V8 CTA SYSTEM */
+.section-cta{
+  display:inline-flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:28px;
+  margin-top:18px;
+  padding:13px 0 10px;
+  border-bottom:1px solid currentColor;
+  color:var(--ink);
+  text-decoration:none;
+  font-size:10px;
+  line-height:1;
+  font-weight:800;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+}
+.section-cta span{
+  font-size:17px;
+  line-height:1;
+  transition:transform .2s ease;
+}
+.section-cta:hover span{transform:translate(3px,-3px)}
+.cta-center{text-align:center;margin-top:28px}
+.collect .section-cta{color:var(--ink)}
+.hero-intro .section-cta{margin-top:10px}
+#partner{scroll-margin-top:20px}
+
+/* V9 — 25 CLASS HERO STICKER */
+.f25{
+  left:auto;
+  right:27%;
+  bottom:7%;
+  transform:rotate(7deg);
+}
+@media(max-width:720px){
+  .f25{
+    left:auto;
+    right:2%;
+    bottom:22%;
+    width:20vw;
+  }
+}
+
+/* V10 approved messaging */
+.hero-title{width:60%;left:7%;top:43%;transform:translateY(-50%);padding:0;font-size:clamp(62px,8.3vw,122px);line-height:.82;letter-spacing:-.07em}.hero-title span{display:block;white-space:nowrap}.hero-title span:nth-child(2){color:var(--pink);font-size:1em;letter-spacing:-.07em;margin-top:0}.hero-intro{left:7%;bottom:7%;width:min(470px,47%)}.hero-intro strong{font-weight:700}@media(max-width:720px){.hero-title{width:88%;left:5%;top:25%;transform:none;font-size:15vw!important}.hero-title span{white-space:normal}.hero-intro{left:5%;bottom:2%;width:61%}}
+
+/* V11 — MOBILE-FIRST CONTENT + LAYOUT REFINEMENTS */
+
+/* Hero: headline owns left, bottle owns right. */
+.hero-title{
+  width:52%;
+  left:7%;
+  top:42%;
+  transform:translateY(-50%);
+  padding:0;
+  font-size:clamp(58px,7.4vw,108px);
+  line-height:.78;
+  letter-spacing:-.07em;
+}
+.hero-title span{
+  display:block;
+  white-space:nowrap;
+}
+.hero-title .hero-sweet{
+  color:var(--pink);
+  font-size:1.18em;
+}
+.hero-bottle{
+  width:min(250px,23vw);
+  left:79%;
+  top:53%;
+}
+.hero-intro{
+  left:7%;
+  bottom:6%;
+  width:min(455px,44%);
+}
+.f5{left:auto;right:4%;top:15%}
+.f10{right:27%;top:17%}
+.f25{left:auto;right:25%;bottom:5%}
+.f50{right:3%;bottom:7%}
+
+/* Sweet proof points */
+.sweet-proof{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:0;
+  margin:34px 0 28px;
+  border-top:1px solid var(--ink);
+  border-bottom:1px solid var(--ink);
+}
+.sweet-proof > div{
+  padding:20px 12px 20px 0;
+  border-right:1px solid var(--ink);
+}
+.sweet-proof > div:not(:first-child){padding-left:14px}
+.sweet-proof > div:last-child{border-right:0}
+.sweet-proof strong{
+  display:block;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:clamp(26px,3vw,42px);
+  line-height:1;
+  font-weight:800;
+  letter-spacing:-.055em;
+}
+.sweet-proof span{
+  display:block;
+  margin-top:7px;
+  font-size:8px;
+  line-height:1.35;
+  font-weight:700;
+  letter-spacing:.11em;
+  text-transform:uppercase;
+}
+
+/* Partnership deliverables */
+.moment{
+  max-width:760px;
+}
+.deliverables{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  margin-top:22px;
+  border-top:1px solid var(--ink);
+  border-left:1px solid var(--ink);
+}
+.deliverable{
+  min-height:145px;
+  padding:20px;
+  border-right:1px solid var(--ink);
+  border-bottom:1px solid var(--ink);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+.deliverable strong{
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:clamp(34px,4vw,55px);
+  line-height:.9;
+  font-weight:800;
+  letter-spacing:-.06em;
+}
+.deliverable span{
+  font-size:9px;
+  line-height:1.3;
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.ugc-note{
+  margin:24px 0 0!important;
+  font-family:Arial,Helvetica,sans-serif!important;
+  font-size:14px!important;
+  line-height:1.5!important;
+  font-style:normal!important;
+}
+
+/* Tablet */
+@media(max-width:900px) and (min-width:721px){
+  .hero-title{width:57%;font-size:7.8vw}
+  .hero-bottle{left:80%;width:24vw}
+  .sweet-grid{grid-template-columns:1fr 1fr;gap:5vw}
+  .sweet-proof{grid-template-columns:1fr}
+  .sweet-proof > div{border-right:0;border-bottom:1px solid var(--ink);padding:14px 0!important}
+  .sweet-proof > div:last-child{border-bottom:0}
+}
+
+/* Mobile */
+@media(max-width:720px){
+  .topbar{font-size:8px;gap:12px}
+  .hero{
+    min-height:820px;
+    padding-top:75px;
+    align-items:flex-start;
+  }
+  .hero-stage{
+    min-height:730px;
+    display:block;
+  }
+  .hero-eyebrow{
+    left:0;
+    top:2%;
+  }
+  .hero-title{
+    width:100%;
+    left:0;
+    top:10%;
+    transform:none;
+    font-size:15.2vw!important;
+    line-height:.8;
+  }
+  .hero-title span{white-space:normal}
+  .hero-title .hero-sweet{font-size:1.12em}
+  .hero-bottle{
+    width:43vw;
+    left:68%;
+    top:51%;
+    transform:translate(-50%,-35%);
+  }
+  .f5{width:19vw;right:1%;top:36%}
+  .f10{width:19vw;right:auto;left:2%;top:46%}
+  .f25{width:18vw;right:2%;bottom:16%}
+  .f50{width:18vw;right:auto;left:5%;bottom:13%}
+  .hero-intro{
+    left:0;
+    bottom:0;
+    width:100%;
+    font-size:13px;
+    padding-right:0;
+  }
+
+  .sweet-grid{grid-template-columns:1fr}
+  .sweet-copy h2{font-size:16vw}
+  .sweet-proof{grid-template-columns:repeat(3,1fr)}
+  .sweet-proof > div{
+    padding:15px 7px!important;
+  }
+  .sweet-proof strong{font-size:8vw}
+  .sweet-proof span{font-size:6.5px;letter-spacing:.06em}
+  .sweet-detail{font-size:13px!important}
+
+  .product-row{grid-template-columns:1fr 1fr}
+  .product{min-height:300px}
+
+  .collect h2{font-size:17vw}
+  .why-copy{width:100%}
+
+  .stats{grid-template-columns:repeat(3,1fr)}
+  .deliverables{grid-template-columns:1fr 1fr}
+  .deliverable{min-height:125px;padding:16px}
+  .deliverable strong{font-size:10vw}
+  .deliverable span{font-size:7px}
+  .moment{width:100%}
+  .ask-line{font-size:22px}
+  .cta{width:100%}
+  .footer{gap:15px;font-size:7px}
+}
+
+
+/* V12 — CTA JOURNEY + YES FORM */
+.cta-button{
+  font-family:Arial,Helvetica,sans-serif;
+  background:transparent;
+  cursor:pointer;
+}
+.yes-form{
+  display:none;
+  width:min(650px,100%);
+  margin:26px auto 0;
+  padding:34px;
+  border:1px solid var(--ink);
+  text-align:left;
+}
+.yes-form.open{display:block}
+.yes-form h3{
+  max-width:560px;
+  margin:12px 0 10px;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:clamp(25px,3vw,38px);
+  line-height:1;
+  letter-spacing:-.045em;
+}
+.yes-form > p{
+  margin:0 0 28px;
+  font-size:14px;
+  line-height:1.5;
+}
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+.yes-form label{
+  display:block;
+  margin-bottom:16px;
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+.yes-form input,.yes-form textarea{
+  display:block;
+  width:100%;
+  margin-top:8px;
+  padding:13px 0;
+  border:0;
+  border-bottom:1px solid var(--ink);
+  border-radius:0;
+  outline:0;
+  background:transparent;
+  color:var(--ink);
+  font:14px Arial,Helvetica,sans-serif;
+  text-transform:none;
+  letter-spacing:0;
+}
+.yes-form textarea{resize:vertical}
+.form-submit{
+  width:100%;
+  margin-top:10px;
+  padding:17px 18px;
+  border:1px solid var(--ink);
+  background:var(--ink);
+  color:var(--cream);
+  display:flex;
+  justify-content:space-between;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.15em;
+  cursor:pointer;
+}
+@media(max-width:720px){
+  .yes-form{padding:24px 18px}
+  .form-grid{grid-template-columns:1fr}
+}
+
+/* V13 — PARTNERSHIP-LED HERO */
+.hero-title{
+  width:56%;
+  left:7%;
+  top:42%;
+  transform:translateY(-50%);
+  font-size:clamp(54px,6.9vw,101px);
+  line-height:.78;
+  letter-spacing:-.07em;
+}
+.hero-title span{display:block;white-space:nowrap;color:var(--ink)}
+.hero-title span:nth-child(2),
+.hero-title span:nth-child(4){color:var(--pink)}
+.hero-bottle{
+  width:min(250px,23vw);
+  left:80%;
+  top:53%;
+}
+.hero-intro{
+  left:7%;
+  bottom:6%;
+  width:min(470px,44%);
+}
+@media(max-width:720px){
+  .hero{min-height:850px}
+  .hero-stage{min-height:760px}
+  .hero-title{
+    width:92%;
+    left:0;
+    top:10%;
+    transform:none;
+    font-size:13.7vw!important;
+    line-height:.79;
+  }
+  .hero-title span{white-space:normal}
+  .hero-bottle{
+    width:40vw;
+    left:70%;
+    top:53%;
+  }
+  .hero-intro{
+    left:0;
+    bottom:0;
+    width:100%;
+  }
+}
+
+/* V14 — EARLY COMMERCIAL CLARITY */
+.collab-ask{
+  background:var(--cream);
+  padding:115px 0 120px;
+  border-bottom:1px solid var(--ink);
+}
+.collab-ask h2{
+  margin:14px 0 70px;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:clamp(58px,8.5vw,124px);
+  line-height:.78;
+  letter-spacing:-.075em;
+  font-weight:900;
+  text-transform:uppercase;
+}
+.collab-ask h2 span{display:block}
+.collab-ask h2 span:nth-child(2){color:var(--pink)}
+.collab-grid{
+  display:grid;
+  grid-template-columns:1.25fr .75fr;
+  gap:8vw;
+  padding-top:28px;
+  border-top:1px solid var(--ink);
+}
+.collab-main{
+  max-width:620px;
+  font-size:16px;
+  line-height:1.55;
+}
+.collab-main p{margin:0 0 18px}
+.collab-lead{
+  font-size:clamp(22px,2.5vw,32px);
+  line-height:1.15!important;
+  letter-spacing:-.025em;
+}
+.collab-return{
+  padding-left:25px;
+  border-left:1px solid var(--ink);
+}
+.collab-return p{
+  margin:18px 0 0;
+  font-size:14px;
+  line-height:1.8;
+}
+.collab-yes{
+  width:100%;
+  margin-top:60px;
+  padding:20px 22px;
+  border:1px solid var(--ink);
+  background:var(--ink);
+  color:var(--cream);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  font:800 11px/1 Arial,Helvetica,sans-serif;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:.2s ease;
+}
+.collab-yes:hover{
+  background:var(--pink);
+  color:var(--ink);
+}
+.collab-yes span:last-child{
+  font-size:21px;
+  letter-spacing:0;
+}
+@media(max-width:720px){
+  .collab-ask{padding:75px 0 80px}
+  .collab-ask h2{
+    margin-bottom:45px;
+    font-size:15.5vw;
+    line-height:.8;
+  }
+  .collab-grid{
+    grid-template-columns:1fr;
+    gap:34px;
+  }
+  .collab-main{font-size:14px}
+  .collab-lead{font-size:22px}
+  .collab-return{
+    padding:26px 0 0;
+    border-left:0;
+    border-top:1px solid var(--ink);
+  }
+  .collab-yes{
+    margin-top:42px;
+    padding:18px 16px;
+    font-size:9px;
+    letter-spacing:.1em;
+    text-align:left;
+  }
+}
+
+
+/* V15 — BINK VALUE EXCHANGE */
+.collab-return h3{
+  margin:14px 0 22px;
+  font:800 clamp(22px,2.4vw,32px)/1 Arial,Helvetica,sans-serif;
+  letter-spacing:-.04em;
+}
+.bink-value-list{
+  border-top:1px solid var(--ink);
+}
+.bink-value-list > div{
+  display:grid;
+  grid-template-columns:48px 1fr;
+  gap:14px;
+  align-items:start;
+  padding:12px 0;
+  border-bottom:1px solid var(--line);
+}
+.bink-value-list strong{
+  font:800 18px/1 Arial,Helvetica,sans-serif;
+  letter-spacing:-.04em;
+}
+.bink-value-list span{
+  font-size:12px;
+  line-height:1.35;
+}
+.bink-payoff{
+  max-width:760px;
+  margin:48px 0 0;
+  font:800 clamp(22px,3vw,38px)/1.05 Arial,Helvetica,sans-serif;
+  letter-spacing:-.045em;
+}
+@media(max-width:720px){
+  .collab-return h3{font-size:24px}
+  .bink-value-list > div{grid-template-columns:40px 1fr}
+  .bink-payoff{margin-top:38px;font-size:24px}
+}
+
+/* V16 — BIGGER PRODUCT MOMENT + IMPACT */
+.collect{
+  padding-top:95px;
+  padding-bottom:105px;
+}
+.bottle-stage{
+  width:min(1080px,100%);
+  min-height:760px;
+  margin:-20px auto 0;
+}
+.collect-bottle{
+  width:min(500px,52vw);
+  top:49%;
+}
+.collect-sticker{
+  width:clamp(130px,17vw,210px);
+}
+.c5{left:3%;top:13%}
+.c10{right:2%;top:13%}
+.c25{left:1%;bottom:7%}
+.c50{right:2%;bottom:6%}
+.collect-note{right:9%;top:55%}
+
+.impact-moment{
+  max-width:900px;
+}
+.impact-moment h3{
+  margin:14px 0 30px;
+  font:800 clamp(30px,4.2vw,58px)/.95 Arial,Helvetica,sans-serif;
+  letter-spacing:-.055em;
+}
+.impact-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border-top:1px solid var(--ink);
+  border-left:1px solid var(--ink);
+}
+.impact{
+  min-height:165px;
+  padding:18px;
+  border-right:1px solid var(--ink);
+  border-bottom:1px solid var(--ink);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+.impact strong{
+  font:800 clamp(34px,4vw,56px)/.9 Arial,Helvetica,sans-serif;
+  letter-spacing:-.065em;
+}
+.impact span{
+  font-size:8px;
+  line-height:1.35;
+  font-weight:700;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+}
+.impact-note{
+  max-width:760px;
+  margin:30px 0 0!important;
+  font:14px/1.55 Arial,Helvetica,sans-serif!important;
+  font-style:normal!important;
+}
+@media(max-width:720px){
+  .bottle-stage{min-height:600px}
+  .collect-bottle{width:65vw}
+  .collect-sticker{width:27vw}
+  .c5{left:-4%;top:14%}
+  .c10{right:-4%;top:15%}
+  .c25{left:-5%;bottom:8%}
+  .c50{right:-4%;bottom:8%}
+  .impact-grid{grid-template-columns:1fr 1fr}
+  .impact{min-height:135px;padding:14px}
+  .impact strong{font-size:10vw}
+  .impact span{font-size:6.8px}
+}
+
+/* V17 — HERO ASK CLARITY */
+.hero-intro .hero-ask{
+  margin-bottom:10px;
+  font-size:clamp(16px,1.5vw,20px);
+  line-height:1.25;
+  letter-spacing:-.015em;
+}
+.hero-intro .hero-ask strong{font-weight:800}
+@media(max-width:720px){
+  .hero-intro .hero-ask{font-size:15px}
+}
+
+/* V18 final response */
+.ask-line,.final-close{max-width:820px;margin:48px auto 0;font-family:Arial,Helvetica,sans-serif!important;font-style:normal!important;font-size:clamp(24px,3.2vw,42px);line-height:1.05;font-weight:800;letter-spacing:-.045em;text-align:center;writing-mode:horizontal-tb!important;transform:none!important}.reply-cta{width:min(650px,100%);margin:48px auto 0;padding:34px 28px;border:1px solid var(--ink);text-align:center}.reply-cta h3{margin:12px 0 8px;font:800 clamp(30px,4vw,48px)/.95 Arial,Helvetica,sans-serif;letter-spacing:-.05em}.reply-cta p{margin:0;font-size:15px;line-height:1.5}@media(max-width:720px){.ask-line,.final-close{font-size:25px}.reply-cta{padding:28px 18px}.reply-cta h3{font-size:32px}}
+
+/* V19 — overlap/alignment fixes only */
+@media(min-width:721px){
+  .f10{right:16%!important;top:10%!important;width:min(150px,12vw)!important;}
+}
+.ask-line{display:block!important;width:min(820px,90%)!important;margin:48px auto 0!important;text-align:center!important;}
+.reply-cta{clear:both!important;margin:48px auto 0!important;}
+
+</style>
+</head>
+
+<body>
+
+<header class="topbar">
+  <span>Sweet Studio × Bink</span>
+  <span>Honolulu, Hawaiʻi</span>
+</header>
+
+<!-- 01 — HERO -->
+<section class="hero">
+  <div class="hero-stage">
+    <div class="hero-eyebrow">SWEET MILESTONES × BINK</div>
+    <h1 class="hero-title">
+      <span>We made</span>
+      <span>the stickers.</span>
+      <span>You make</span>
+      <span>the bottle.</span>
+    </h1>
+    <div class="hero-intro">
+      <p class="hero-ask"><strong>We're inviting Bink to sponsor 30 bottles for our first Sweet Milestones launch.</strong></p>
+      <p>Every milestone earns a collectible sticker. We want Bink to be where our members collect them.</p>
+      <a class="section-cta" href="#collab">SEE WHY IT WORKS <span>↓</span></a>
+    </div>
+
+    <img class="hero-bottle"
+      src="Images/bottle.png"
+      alt="Bink water bottle">
+
+    <img class="float f5"
+      src="Images/sticker-05.png"
+      alt="Sweet 5 Class milestone sticker">
+
+    <img class="float f10"
+      src="Images/sticker-10.png"
+      alt="Sweet 10 Class milestone sticker">
+
+
+    <img class="float f25"
+      src="Images/sticker-25.png"
+      alt="Sweet 25 Class milestone sticker">
+
+    <img class="float f50"
+      src="Images/sticker-50.png"
+      alt="Sweet 50 Class milestone sticker">
+
+    <div class="note">
+      your milestones<br>live here ♡
+      <span class="arrow">↙</span>
+    </div>
+  </div>
+</section>
+
+<!-- 02 — SWEET -->
+<section class="sweet">
+  <div class="wrap sweet-grid">
+    <div class="photo-frame">
+      <!-- Replace this src with your hosted Sweet studio photo URL -->
+      <img src="Images/studio.jpg" alt="Sweet Studio community">
+    </div>
+
+    <div class="sweet-copy">
+      <div class="kicker">Meet Sweet</div>
+      <h2><span>Hot mat.</span><span>Sculpt.</span><em>Very Sweet.</em></h2>
+      <p>Sweet is a hot sculpt studio in Honolulu with a community that keeps coming back.</p>
+
+      <div class="sweet-proof">
+        <div><strong>5.4K</strong><span>followers</span></div>
+        <div><strong>190K</strong><span>reach this year</span></div>
+        <div><strong>7.6K+</strong><span>class visits · Jan–Jul 2026</span></div>
+      </div>
+
+      <p class="sweet-detail">Our members share Sweet, too. Multiple member-made Reels have reached <strong>7K+ organically</strong> this year — no paid boost.</p>
+
+      <div class="down">Sweet Milestones is how we celebrate the ones who keep coming back.</div>
+      <a class="section-cta" href="#partner">BRING BINK TO SWEET <span>↗</span></a>
+    </div>
+  </div>
+  </div>
+</section>
+
+
+<!-- 02B — THE COLLAB / CLEAR ASK -->
+<section class="collab-ask" id="collab">
+  <div class="wrap">
+    <div class="kicker">What 30 Binks Become</div>
+
+    <h2>
+      <span>More than</span>
+      <span>one launch.</span>
+    </h2>
+
+    <div class="collab-grid">
+      <div class="collab-main">
+        <p class="collab-lead">Those 30 bottles become part of an ongoing member ritual — not just a one-day event.</p>
+        <p>We'll launch with 30 core members + instructors across two dedicated classes. From there, every new milestone is another reason to bring the bottle back, add a sticker and share it again.</p>
+      </div>
+
+      <div class="collab-return">
+        <div class="kicker">What Bink Gets</div>
+        <h3>More than a launch-day placement.</h3>
+        <div class="bink-value-list">
+          <div><strong>01</strong><span>Official Reel featuring Bink</span></div>
+          <div><strong>01</strong><span>Professional photo shoot</span></div>
+          <div><strong>30</strong><span>Bottles in the hands of core Sweet members + instructors</span></div>
+          <div><strong>02</strong><span>Dedicated launch classes with Bink on the mat</span></div>
+          <div><strong>+</strong><span>Organic member content + social coverage from Sweet</span></div>
+          <div><strong>↻</strong><span>Ongoing visibility as members bring their Binks back to class</span></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="bink-payoff">The event gives Bink the content. The milestone program keeps Bink in the room after it.</p>
+
+    <button class="collab-yes" type="button"
+      onclick="document.getElementById('yes-form').classList.add('open');document.getElementById('partner').scrollIntoView({behavior:'smooth'});">
+      <span>YES — WE'D LOVE TO SPONSOR SWEET</span>
+      <span>↗</span>
+    </button>
+  </div>
+</section>
+
+<!-- 03 — MILESTONES -->
+<section class="milestones">
+  <div class="wrap">
+    <div class="milestone-head">
+      <div>
+        <div class="kicker">Sweet Milestones</div>
+        <h2>
+          <span>Show up.</span>
+          <span>Get the</span>
+          <em>sticker.</em>
+        </h2>
+      </div>
+      <p>Something small to celebrate something big.</p>
+    </div>
+
+    <div class="product-row">
+      <article class="product">
+        <div class="product-meta"><span>Milestone</span><span>05</span></div>
+        <img src="Images/sticker-05.png" alt="Sweet 5 Class sticker">
+      </article>
+
+      <article class="product">
+        <div class="product-meta"><span>Milestone</span><span>10</span></div>
+        <img src="Images/sticker-10.png" alt="Sweet 10 Class sticker">
+      </article>
+
+      <article class="product">
+        <div class="product-meta"><span>Milestone</span><span>25</span></div>
+        <img src="Images/sticker-25.png" alt="Sweet 25 Class sticker">
+      </article>
+
+      <article class="product">
+        <div class="product-meta"><span>Milestone</span><span>50</span></div>
+        <img src="Images/sticker-50.png" alt="Sweet 50 Class sticker">
+      </article>
+    </div>
+
+    <div class="milestone-bottom">
+      05&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp; 25&nbsp;&nbsp;&nbsp; 50
+    </div>
+    <div class="cta-center">
+      <a class="section-cta" href="#partner">BECOME OUR LAUNCH PARTNER <span>↗</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 04 — BINK MOMENT -->
+<section class="collect">
+  <div class="kicker">Why Bink</div>
+
+  <h2><span>Made to</span><span>stick around.</span></h2>
+
+  <div class="bottle-stage">
+    <img class="collect-bottle"
+      src="Images/bottle-stickers.png"
+      alt="Pink Bink bottle with Sweet Studio milestone stickers">
+
+
+    <div class="collect-note">
+      made to stick around ↗
+      
+    </div>
+  </div>
+
+  <div class="why-copy">
+    <p>A Bink doesn't disappear when the event ends.</p>
+    <p>Members bring it back to class, add their next sticker, and keep building their collection.</p>
+    <strong>So every class after this one — Bink's still in the room.</strong>
+    <div class="progression">5 → 10 → 25 → 50 → ♡</div>
+    <div class="cta-center">
+      <a class="section-cta" href="#partner">KEEP BINK IN THE ROOM <span>↗</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 05 — ASK -->
+<section class="ask" id="partner">
+  <div class="ask-inner">
+    <div class="kicker">Sweet Milestones × Bink</div>
+    <h2><span>Let's launch</span><em>it together.</em></h2>
+    <div class="stats">
+      <div class="stat"><strong>30</strong><span>Members</span></div>
+      <div class="stat"><strong>30</strong><span>Binks</span></div>
+      <div class="stat"><strong>02</strong><span>Classes</span></div>
+    </div>
+    <div class="founders-copy">
+      <p>These are our founding members — the ones who've shown up over 100 times and set the tone for everyone who joins Sweet next.</p>
+      <p>A Bink in their hands isn't a one-day gift. It's what's on the mat every week after.</p>
+    </div>
+    <div class="moment impact-moment">
+      <div class="kicker">We'll make it a moment.</div>
+      <h3>One sponsorship. More than one day of impact.</h3>
+
+      <div class="impact-grid">
+        <div class="impact"><strong>30</strong><span>Binks in the hands of core members + instructors</span></div>
+        <div class="impact"><strong>02</strong><span>Dedicated Sweet Milestones launch classes</span></div>
+        <div class="impact"><strong>01</strong><span>Official launch Reel featuring Bink</span></div>
+        <div class="impact"><strong>01</strong><span>Professional photo shoot</span></div>
+        <div class="impact"><strong>190K</strong><span>Sweet reach this year</span></div>
+        <div class="impact"><strong>7.6K+</strong><span>Class visits · Jan–Jul 2026</span></div>
+        <div class="impact"><strong>7K+</strong><span>Organic reach on multiple member-made Reels</span></div>
+        <div class="impact"><strong>5.4K</strong><span>Sweet followers</span></div>
+      </div>
+
+      <p class="impact-note"><strong>And the value doesn't stop at launch.</strong> Every new milestone gives members another reason to bring their Bink back, add a sticker and share the moment again.</p>
+    </div>
+
+    <div class="ask-line">30 bottles at launch. A brand presence that keeps coming back.</div>
+
+    <div class="reply-cta"><div class="kicker">Ready to make it Sweet?</div><h3>Just reply to this email.</h3><p>Say <strong>“we’re in”</strong> and we’ll take it from there. ♡</p></div>
+
+    <div class="footer"><span>Sweet × Bink</span><span>Honolulu, Hawaiʻi</span></div>
+  </div>
+</section>
+
+</body>
+</html>
